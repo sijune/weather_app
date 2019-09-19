@@ -53,8 +53,7 @@
 + 리액트 네이티브로 작성된 코드를 컴파일한 결과는 결국 objectC나 java다.
 + 우리는 jsx로 작성 페이스북 기술에 의해 js-objectiveC, js-java가 구동
 
-#### 사용된 예시
-+ 인스타그램, 페이스북, 에어비앤비 등 어플에서 사용<br>
+#### 사용된 예시 : 인스타그램, 페이스북, 에어비앤비 등 어플에서 사용<br>
 
 ### 자주 나오는 개념
 ***function, state, component*** 
@@ -77,16 +76,13 @@ yarn도 설치하자<br>
 	+ npm의 느린 속도로 페이스북, 구글 개발자들이 만들 패키지 매니저
 	+ expo init kawai_todo 를 할 때, yarn을 이용해 설치된다.<br>
 ```bash
-$ npm install --global yarn
+$ npm install --global yarn //오류 시 환경변수 확인, warn이 떠도 상관x
 ```
-오류 시 환경변수 확인<br>
-warn이 떠도 상관x, 
+
 
 ```bash
 $ npm install expo-cli --global
-$ expo init hello_weather
-첫번째 템플릿 선택, 
-이름은 hello_weather
+$ expo init hello_weather //첫번째 템플릿 선택, 이름은 hello_weather
 $ cd hello_weather
 $ expo start
 ```
@@ -99,24 +95,26 @@ https://docs.expo.io/versions/v34.0.0/workflow/android-studio-emulator/ 참고<b
 에뮬레이터를 실행시키고, expo start, Run on Android device 클릭<br>
 
 ##### 핫리로딩 설정가능
-모바일이라면 - shake <br>
-에뮬레이터라면 - ctrl + m<br> 
+1. 모바일이라면 - shake <br>
+2. 에뮬레이터라면 - ctrl + m<br> 
 
 
-## 환경설정 끝
 
----------------------------------------------------------------
-
-깃 저장소 생성
-git init
-git remote ~~
-git pull origin master //먼저 땡겨온다.
+## 깃 저장소 생
+``` bash
+$ git init
+$ git remote ~~
+$ git pull origin master //먼저 땡겨온다.
 //안되면 git pull origin (branchname) --allow-unrelated-histories 쓰기(강제로 땡겨온다)
-git add .
-git commit -m "first commit"
-git push origin master
+$ git add .
+$ git commit -m "first commit"
+$ git push origin master
+```
+
+### 환경설정 끝
 
 -----------------------------------------------------------------
+
 local state로 작업해야 한다.
 
 ***state가 변경되면 render를 다시한다.***

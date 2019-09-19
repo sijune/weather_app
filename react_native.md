@@ -115,13 +115,12 @@ $ git push origin master
 
 -----------------------------------------------------------------
 
-local state로 작업해야 한다.
+### 로딩화면 만들기
++ local state로 작업해야 한다.
 
-***state가 변경되면 render를 다시한다.***
+***state가 변경되면 render를 다시한다.***<br>
  
-로딩 화면 만들기
-
--App.js
+-App.js //로딩 화면 만들기
 ``` javascript
 import React, {Component} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
@@ -165,10 +164,11 @@ const styles = StyleSheet.create({
 });
 ```
 ------------------------------------------
-날씨화면을 만들꺼다.
 
+### 날씨화면을 만들꺼다.
+```bash
 expo install expo-linear-gradient
-
+```
 -App.js
 ``` javascript
 import React, {Component} from 'react';
@@ -284,18 +284,16 @@ const styles = StyleSheet.create({
 
 ---------------------------------------
 
-아이콘 만들기
-
+### 아이콘 만들기
+``` javascript
 {/* 상단을 다 없애준다. 리액트에서 제공하는 api */}
         <StatusBar hidden={true} />        
-
-expo에서는 아이콘을 api로 제공해준다.
+```
+expo에서는 아이콘을 api로 제공해준다.<br>
 https://expo.github.io/vector-icons/
 
 이중에서 MaterialCommunityIcons를 쓴다.
 (원래 강의는 Ionicons를 쓰지만 끝에 MaterialCommunityIcons로 수정됨)
-
-
 
 
 -App.js
@@ -418,13 +416,16 @@ const styles = StyleSheet.create({
 ```
 
 --------------------------------------------------------
+### 위치정보
 자바스크립트는 유저의 위치를 navigator를 이용해 현재 위치를 뽑아준다.
+``` javascript
 navigator.geolocation.getCurrentPosition(function(position){
 	console.log(position)
-})
-=>위치정보
-getCurrentPosition가 성공적으로 수행하면 한개의 함수를 실행한다.
-그 안에 하나의 attribute가 있는데 그게 위치정보를 갖는다.
+})//위치정보
+//getCurrentPosition가 성공적으로 수행하면 한개의 함수를 실행한다.
+//그 안에 하나의 attribute가 있는데 그게 위치정보를 갖는다.
+```
+
 
 리액트 네이티브에서도 동일하게 작동
 
@@ -441,7 +442,7 @@ getCurrentPosition가 성공적으로 수행하면 한개의 함수를 실행한
     )
   }
 ```
-우선 확인
+우선 콘솔 확인 후 다시돌아오자
 
 -App.js
 ``` javascript
@@ -466,18 +467,18 @@ getCurrentPosition가 성공적으로 수행하면 한개의 함수를 실행한
 ```
 
 -------------------------------------------------
-이 위치를 api로 보낸다 그 api로 날싸정보를 얻어서 보여줄 수 있다.
+이 위치를 api로 보낸다 그 api로 날싸정보를 얻어서 보여줄 수 있다.<br>
 
-날씨 api가 필요 open weather map
-회원가입 필요
-api키: f7538a75367b9b9f43e4fdc306c4a5ab
+날씨 api가 필요, open weather map 사이트 방문<br>
+회원가입 필요<br>
+api키: 123456~~~<br>
 
-CONST API_KEY = "~~";
-키와 lat, lon으로 날씨정보를 받아온다.
+CONST API_KEY = "12345~";<br>
+키와 lat, lon으로 날씨정보를 받아온다.<br>
 
 ***위치정보와 날씨가 확인되면 isLoaded를 true로 변경한다.***
 
-앱에서 debug JS remotely를 클릭하면 원격으로 디버그 가능
+앱에서 debug JS remotely를 클릭하면 원격으로 디버그 가능(shake할 때 나타나는 )<br>
 
 -App.js
 ``` javascript

@@ -1,6 +1,6 @@
 # 리액트 문법으로 모바일 개발하기
 
-## 리액트 네이티브
+### 리액트 네이티브
 ***모든 것을 오브젝트로 작성한다.***<br>
 + 리액트 네이티브는 리턴할 컴포넌트가 한정되어 있다.
 + ex. JS코드 => java나 Object-C로 바뀐다.
@@ -17,7 +17,7 @@
 
 --------------------------------------------------------------------------------
 
-## Expo와 그 특징
+### Expo와 그 특징
 
 + 우리가 js로 코딩한 react컴포넌트는 react native플랫폼을 거쳐 ios, android native코드로<br> 
 각각 변환된다.
@@ -57,7 +57,7 @@
 + 인스타그램, 페이스북, 에어비앤비 등 어플에서 사용<br>
 
 ### 자주 나오는 개념
-*** function, state, component *** 
+***function, state, component*** 
 
 ### 한정된 컴포넌트만 사용가능
 + reactnative는 리턴할 수 있는 컴포넌트가 한정되어 있다.
@@ -66,36 +66,45 @@
 
 --------------------------------------------------------------------
 
-*환경설정
-nodejs가 버전10이상이여야 한다.
-node -v
-npm은 자동 설치
-yarn도 설치하자
-	npm의 느린 속도로 페이스북, 구글 개발자들이 만들 패키지 매니저
-	expo init kawai_todo 를 할 때, yarn을 이용해 설치된다.
-npm install --global yarn
-오류 시 환경변수 확인
+### 환경설정
+
+```bash
+node -v //nodejs가 버전10이상이여야 한다.
+```
+npm은 자동 설치<br>
+yarn도 설치하자<br>
++ yarn이란?
+	+ npm의 느린 속도로 페이스북, 구글 개발자들이 만들 패키지 매니저
+	+ expo init kawai_todo 를 할 때, yarn을 이용해 설치된다.<br>
+```bash
+$ npm install --global yarn
+```
+오류 시 환경변수 확인<br>
 warn이 떠도 상관x, 
 
-
-npm install expo-cli --global
-expo init kawai_todo
+```bash
+$ npm install expo-cli --global
+$ expo init hello_weather
 첫번째 템플릿 선택, 
-이름은 kawai_todo
-cd kawai_todo
-expo start
+이름은 hello_weather
+$ cd hello_weather
+$ expo start
+```
 
+## 모바일 화면을 실행하는 방법 
 1. expo 앱을 깔고 qr코드 스캔, 단 같은 네트워크에 있어야 됨 - 핫스팟을 통해 가능
 2. 안드로이드 스튜디오 깔기
-https://docs.expo.io/versions/v34.0.0/workflow/android-studio-emulator/ 참고
-환경변수로 ANDROID_HOME, sdk경로 추가해주기
-에뮬레이터를 실행시키고, expo start, Run on Android device 클릭
+https://docs.expo.io/versions/v34.0.0/workflow/android-studio-emulator/ 참고<br>
+환경변수로 ANDROID_HOME, sdk경로 추가해주기<br>
+에뮬레이터를 실행시키고, expo start, Run on Android device 클릭<br>
 
-모바일이라면 - shake
-에뮬레이터라면 - ctrl + m 
-으로 핫리로딩 설정가능
+##### 핫리로딩 설정가능
+모바일이라면 - shake <br>
+에뮬레이터라면 - ctrl + m<br> 
 
-환경설정 끝
+
+## 환경설정 끝
+
 ---------------------------------------------------------------
 
 깃 저장소 생성

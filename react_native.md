@@ -100,7 +100,7 @@ https://docs.expo.io/versions/v34.0.0/workflow/android-studio-emulator/ 참고<b
 
 
 
-## 깃 저장소 생
+## 깃 저장소 생성
 ``` bash
 $ git init
 $ git remote ~~
@@ -122,6 +122,7 @@ local state로 작업해야 한다.
 로딩 화면 만들기
 
 -App.js
+``` javascript
 import React, {Component} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -162,13 +163,14 @@ const styles = StyleSheet.create({
 
   }
 });
-
+```
 ------------------------------------------
 날씨화면을 만들꺼다.
 
 expo install expo-linear-gradient
 
 -App.js
+``` javascript
 import React, {Component} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -211,8 +213,10 @@ const styles = StyleSheet.create({
 
   }
 });
+```
 
 -weather.js
+``` javascript
 import React, {Component} from 'react';
 import {StyleSheet, Text, View } from 'react-native';
 import {LinearGradient} from "expo-linear-gradient";
@@ -276,8 +280,10 @@ const styles = StyleSheet.create({
         marginBottom: 24
     }
 })
+```
 
 ---------------------------------------
+
 아이콘 만들기
 
 {/* 상단을 다 없애준다. 리액트에서 제공하는 api */}
@@ -293,6 +299,7 @@ https://expo.github.io/vector-icons/
 
 
 -App.js
+``` javascript
 import React, {Component} from 'react';
 import { StyleSheet, Text, View, StatusBar } from 'react-native';
 
@@ -337,8 +344,10 @@ const styles = StyleSheet.create({
 
   }
 });
+```
 
 -weather.js
+``` javascript
 import React, {Component} from 'react';
 import {StyleSheet, Text, View } from 'react-native';
 import {LinearGradient} from "expo-linear-gradient";
@@ -406,6 +415,7 @@ const styles = StyleSheet.create({
         marginBottom: 24
     }
 })
+```
 
 --------------------------------------------------------
 자바스크립트는 유저의 위치를 navigator를 이용해 현재 위치를 뽑아준다.
@@ -422,6 +432,7 @@ getCurrentPosition가 성공적으로 수행하면 한개의 함수를 실행한
 
    
 -App.js
+``` javascript
   componentDidMount() {
     navigator.geolocation.getCurrentPosition(
       position => {
@@ -429,9 +440,11 @@ getCurrentPosition가 성공적으로 수행하면 한개의 함수를 실행한
       }
     )
   }
+```
 우선 확인
 
 -App.js
+``` javascript
   state = {
     //정보를 받았느지 안받았는지 알려주는 indicator가 필요
     //데이터 api를 불러오면 이 값은 true가 될 것이다.
@@ -450,6 +463,7 @@ getCurrentPosition가 성공적으로 수행하면 한개의 함수를 실행한
       }
     )
   }
+```
 
 -------------------------------------------------
 이 위치를 api로 보낸다 그 api로 날싸정보를 얻어서 보여줄 수 있다.
@@ -466,6 +480,7 @@ CONST API_KEY = "~~";
 앱에서 debug JS remotely를 클릭하면 원격으로 디버그 가능
 
 -App.js
+``` javascript
 state = {
     //정보를 받았느지 안받았는지 알려주는 indicator가 필요
     //데이터 api를 불러오면 이 값은 true가 될 것이다.
@@ -500,8 +515,10 @@ state = {
       })
     })
   }
+```
 
 -----------------------------------------------------------------
+
 날씨 컴포넌트로 돌아가서 refactoring(코드 구조변경)을 해야한다.
 
 state가 필요없고, props만 필요하기에 weather.js를 함수형으로 만든다.
@@ -509,6 +526,7 @@ state가 필요없고, props만 필요하기에 weather.js를 함수형으로 �
 weathername과 temp를 자식 컴포넌트로 넘긴다. 그리고 이와 weatherCases를 잘 이용해서 렌더한다.
 
 -App.js
+``` javascript
 import React, {Component} from 'react';
 import { StyleSheet, Text, View, StatusBar } from 'react-native';
 
@@ -592,10 +610,10 @@ const styles = StyleSheet.create({
 
   }
 });
-
-
+```
 
 -Weather.js
+``` javascript
 import React, {Component} from 'react';
 import {StyleSheet, Text, View } from 'react-native';
 import {LinearGradient} from "expo-linear-gradient";
@@ -708,11 +726,13 @@ const styles = StyleSheet.create({
         marginBottom: 24
     }
 })
+```
 
 -------------------------------------------------------
 끝
 
 -App.js
+``` javascript
 import React, {Component} from 'react';
 import { StyleSheet, Text, View, StatusBar } from 'react-native';
 
@@ -798,9 +818,10 @@ const styles = StyleSheet.create({
 
   }
 });
-
+```
 
 -weather.js
+``` javascript
 import React, {Component} from 'react';
 import {StyleSheet, Text, View } from 'react-native';
 import {LinearGradient} from "expo-linear-gradient";
@@ -933,24 +954,4 @@ const styles = StyleSheet.create({
         marginBottom: 24
     }
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```

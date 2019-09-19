@@ -1,7 +1,8 @@
 # 리액트 문법으로 모바일 개발하기
 
-### 리액트 네이티브
-***모든 것을 오브젝트로 작성한다.***<br>
+### 리액트 네이티브, 들어가면서...<br>
+
+*** 중요한점: 모든 것을 오브젝트로 작성한다.***<br>
 + 리액트 네이티브는 리턴할 컴포넌트가 한정되어 있다.
 + ex. JS코드 => java나 Object-C로 바뀐다.
 + 이는 리액트 네이티브 공식사이트에서 확인 가능<br>
@@ -51,12 +52,11 @@
 ### ReactNative
 + React로 네이티브 모바일 앱을 만들 수 있게 도와주는 라이브러리
 + 리액트 네이티브로 작성된 코드를 컴파일한 결과는 결국 objectC나 java다.
-+ 우리는 jsx로 작성 페이스북 기술에 의해 js-objectiveC, js-java가 구동
++ 우리는 jsx로 작성 페이스북 기술에 의해 js-objectiveC, js-java가 구동<br>
 
 #### 사용된 예시 : 인스타그램, 페이스북, 에어비앤비 등 어플에서 사용<br>
 
-### 자주 나오는 개념
-***function, state, component*** 
+#### 자주 나오는 개념: function, state, component
 
 ### 한정된 컴포넌트만 사용가능
 + reactnative는 리턴할 수 있는 컴포넌트가 한정되어 있다.
@@ -68,13 +68,13 @@
 ### 환경설정
 
 ```bash
-node -v //nodejs가 버전10이상이여야 한다.
+node -v //nodejs가 버전10이상이여야 한다, npm은 자동 설치
 ```
-npm은 자동 설치<br>
-yarn도 설치하자<br>
+
 + yarn이란?
 	+ npm의 느린 속도로 페이스북, 구글 개발자들이 만들 패키지 매니저
 	+ expo init kawai_todo 를 할 때, yarn을 이용해 설치된다.<br>
+yarn도 설치하자<br>	
 ```bash
 $ npm install --global yarn //오류 시 환경변수 확인, warn이 떠도 상관x
 ```
@@ -100,7 +100,7 @@ https://docs.expo.io/versions/v34.0.0/workflow/android-studio-emulator/ 참고<b
 
 
 
-## 깃 저장소 생성
+### 깃 저장소 생성
 ``` bash
 $ git init
 $ git remote ~~
@@ -115,7 +115,7 @@ $ git push origin master
 
 -----------------------------------------------------------------
 
-### 로딩화면 만들기
+### <로딩화면 만들기>
 + local state로 작업해야 한다.
 
 ***state가 변경되면 render를 다시한다.***<br>
@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
 ```
 ------------------------------------------
 
-### 날씨화면을 만들꺼다.
+### <날씨화면을 만들꺼다.>
 ```bash
 expo install expo-linear-gradient
 ```
@@ -284,7 +284,7 @@ const styles = StyleSheet.create({
 
 ---------------------------------------
 
-### 아이콘 만들기
+### <아이콘 만들기>
 ``` javascript
 {/* 상단을 다 없애준다. 리액트에서 제공하는 api */}
         <StatusBar hidden={true} />        
@@ -416,7 +416,7 @@ const styles = StyleSheet.create({
 ```
 
 --------------------------------------------------------
-### 위치정보
+### <위치정보>
 자바스크립트는 유저의 위치를 navigator를 이용해 현재 위치를 뽑아준다.
 ``` javascript
 navigator.geolocation.getCurrentPosition(function(position){
@@ -467,6 +467,8 @@ navigator.geolocation.getCurrentPosition(function(position){
 ```
 
 -------------------------------------------------
+
+### <날씨정보>
 이 위치를 api로 보낸다 그 api로 날싸정보를 얻어서 보여줄 수 있다.<br>
 
 날씨 api가 필요, open weather map 사이트 방문<br>

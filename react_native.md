@@ -520,11 +520,12 @@ state = {
 
 -----------------------------------------------------------------
 
-날씨 컴포넌트로 돌아가서 refactoring(코드 구조변경)을 해야한다.
+### 코드구조변경
++ 날씨 컴포넌트로 돌아가서 refactoring(코드 구조변경)을 해야한다.
 
-state가 필요없고, props만 필요하기에 weather.js를 함수형으로 만든다.
-아이콘, 온도, 타이틀의 변경이 이루어진다. -> props가 필요하다.
-weathername과 temp를 자식 컴포넌트로 넘긴다. 그리고 이와 weatherCases를 잘 이용해서 렌더한다.
+state가 필요없고, props만 필요하기에 weather.js를 함수형으로 만든다.<br>
+아이콘, 온도, 타이틀의 변경이 이루어진다. -> props가 필요하다.<br>
+weathername과 temp를 자식 컴포넌트로 넘긴다. 그리고 이와 weatherCases를 잘 이용해서 렌더한다.<br>
 
 -App.js
 ``` javascript
@@ -730,7 +731,7 @@ const styles = StyleSheet.create({
 ```
 
 -------------------------------------------------------
-끝
+### 끝
 
 -App.js
 ``` javascript
